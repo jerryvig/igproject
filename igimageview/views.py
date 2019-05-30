@@ -9,6 +9,7 @@ def index(request):
     # some context object to pass to the template renderer here.
     context = {
         'natalia_jimenez': 'creo creo creo en mi',
+        'music_data': 'music data here',
     }
 
     return render(request, 'index.html', context=context)
