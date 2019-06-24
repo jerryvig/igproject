@@ -11,7 +11,19 @@ class IGPost(models.Model):
 
     poster_name = models.CharField(max_length=512, help_text='Enter the Instagram Posters name.')
 
-    type = ()
+    POST_TYPE = (
+        ('img', 'Image'),
+        ('video', 'Video'),
+        ('carousel', 'Carousel'),
+    )
+
+    type = models.CharField(
+        max_length=12,
+        choices=POST_TYPE,
+        blank=True,
+        default='img',
+        help_text='Instagram Post Type'
+    )
 
     def __str__(self):
         """String representation of the IG Post. Using the post's URL for now."""
