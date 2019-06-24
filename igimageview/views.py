@@ -1,5 +1,6 @@
 from django.shortcuts import render
-# from igimageview.models import blah, blah, blah
+from igimageview.models import IGPost
+from igimageview.models import IGImage
 
 # Create your views here.
 
