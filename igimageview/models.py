@@ -11,6 +11,8 @@ class IGPost(models.Model):
 
     poster_name = models.CharField(max_length=512, help_text='Enter the Instagram Posters name.')
 
+    post_datetime = models.DateTimeField(auto_now=False, auto_now_add=False, null=True, blank=True)
+
     POST_TYPE = (
         ('img', 'Image'),
         ('video', 'Video'),
